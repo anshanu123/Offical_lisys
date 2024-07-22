@@ -1,0 +1,122 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --card-bg-color: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.mt-4rem {
+    margin-top: 4rem;
+}
+
+/* Mission Section Styles */
+.mission-section {
+    padding: 3rem 1rem;
+    background-color: var(--bg-color);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.mission-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mission-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem; /* Reduced font size */
+    color: var(--secondary-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mission-section .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.mission-section .card {
+    background-color: var(--card-bg-color);
+    box-shadow: 0 4px 8px var(--card-shadow);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    flex: 1;
+    min-width: calc(50% - 2rem);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.mission-section .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px var(--card-shadow);
+    background-color: var(--bg-color);
+}
+
+.mission-section .card h3 {
+    font-size: 1.5rem; /* Reduced font size */
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mission-section .card p,
+.mission-section .card ul {
+    font-size: 1rem; /* Reduced font size */
+    line-height: 1.6;
+    color: var(--text-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mission-section .card ul {
+    padding-left: 1.5rem;
+}
+
+.mission-section .card ul li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 767px) {
+    .mission-section .card {
+        min-width: 100%;
+    }
+}
+
+/* Fade-in animation for the section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mission-section {
+    animation: fadeIn 1s ease forwards;
+}
+
+.mission-section .card {
+    animation: fadeIn 1s ease forwards 0.3s;
+}

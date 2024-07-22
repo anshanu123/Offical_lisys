@@ -1,0 +1,99 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3498db;
+    --primary-color-dark: #2980b9;
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --primary-color-light: #85c1e9;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0; /* Ensure no default margin */
+    padding: 0; /* Ensure no default padding */
+}
+
+
+.topic{
+    text-align: center;
+    color: #004080;
+    margin-top: 6rem;
+    margin-bottom: 2rem; /* Add margin bottom for spacing */
+}
+
+.contact-form {
+    background: #ffffff;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #004080;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #004080;
+    outline: none;
+}
+
+.contact-form button.submit-button {
+    align-self: flex-end;
+    padding: 0.75rem 1.5rem;
+    background-color: #004080;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button.submit-button:hover {
+    background-color: #003366;
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        width: 90%;
+    }
+}
+
+
