@@ -12,7 +12,7 @@
 :root {
     --primary-color: #3498db;
     --primary-color-dark: #2980b9;
-    --bg-color: #f8f9fa;
+    --bg-color: #f0f0f0; /* Light grey background color */
     --text-color: #212529;
     --secondary-color: #1b1b1b;
     --accent-color: #85c1e9;
@@ -26,15 +26,48 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color); /* Apply light grey background */
     color: var(--text-color);
     overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(0);
+    }
 }
 
 /* Services section styles */
 .services-section {
     margin-top: 5rem; /* 80px */
     padding: 1.25rem; /* 20px */
+    animation: fadeInUp 1.5s ease-out;
 }
 
 .services-section h2 {
@@ -42,6 +75,7 @@ body {
     color: #003366;
     margin-bottom: 1.875rem; /* 30px */
     font-size: 2.5rem; /* Increased font size */
+    animation: scaleIn 1.5s ease-out;
 }
 
 .services-section h2 + p {
@@ -50,6 +84,7 @@ body {
     max-width: 50rem; /* 800px */
     margin-left: auto;
     margin-right: auto;
+    animation: fadeInUp 2s ease-out;
 }
 
 .services-section h3 {
@@ -58,10 +93,11 @@ body {
     margin-top: 2.5rem; /* 40px */
     margin-bottom: 1.25rem; /* 20px */
     font-size: 2rem; /* Increased font size */
+    animation: fadeInUp 2s ease-out;
 }
 
 .service {
-    background-color: #f0f0f0;
+    background-color: #ffffff; /* White background for services */
     border-radius: 0.3125rem; /* 5px */
     padding: 1.25rem; /* 20px */
     margin-bottom: 1.25rem; /* 20px */
@@ -71,6 +107,7 @@ body {
     vertical-align: top;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 0 4px 8px */
     transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 .service:hover {
@@ -92,6 +129,11 @@ body {
 .service ul li strong {
     color: #004080; /* Color for strong elements */
 }
+
+.animate {
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
 
 /* Responsiveness - Media queries */
 @media (max-width: 48rem) { /* 768px */
